@@ -1,0 +1,26 @@
+h1{
+    text-align: center;
+}
+
+
+fieldset {
+    margin-top: 50px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction:column;
+    min-height: 100vh;
+}
+
+figure {
+    width: 120px;
+    height: 120px;
+    background-color: lightcoral;
+    border-radius: 50%;
+}
+
+figure img {
+    margin-top: 25px;
+}
