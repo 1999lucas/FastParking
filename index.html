@@ -18,17 +18,21 @@
         <form>
             <fieldset>
                 <legend>Novo cliente</legend>
-                <label>Nome:</label>
-                <input type="text" />
-                <label>Placa:</label>
-                <input type="text" />
-                <button class="button">Adicionar</button>
-                <button onclick="openModal('dv-modal')" id="myBtn" class="button">Preços</button>
+                <label id="labelNome">Nome:</label>
+                <input id="nome" type="text" />
+                <label id="labelPlaca">Placa:</label>
+                <input id="placa" type="text" />
+                <label id="labelData">Data:</label>
+                <input id="data" type="date" />
+                <label id="labelHora">Hora:</label>
+                <input id="hora" type="time" />
+                <button type="submit" class="button" id="adicionar">Adicionar</button>
+                <button type="button" id="preco" class="button">Preços</button>
             </fieldset>
         </form>
     </div>
 
-    <table>
+    <table id="tabelaClientes">
         <thead>
             <tr class="tableTitle">
                 <th>Nome</th>
@@ -45,9 +49,9 @@
                 <td>24/05/2021</td>
                 <td>14:40</td>
                 <td>
-                    <button>Comp.</button>
-                    <button>Editar</button>
-                    <button>Saída</button>
+                    <button class="button-green" id="abrir-comprovante">Comp.</button>
+                    <button class="button-blue">Editar</button>
+                    <button class="button-red">Saída</button>
                 </td>
             </tr>
             <tr>
@@ -56,9 +60,9 @@
                 <td>23/05/2021</td>
                 <td>13:30</td>
                 <td>
-                    <button>Comp.</button>
-                    <button>Editar</button>
-                    <button>Saída</button>
+                    <button class="button-green">Comp.</button>
+                    <button class="button-blue">Editar</button>
+                    <button class="button-red">Saída</button>
                 </td>
             </tr>
         </tbody>
@@ -68,13 +72,31 @@
     <div class="modal-content">
         <div class="modalTitle">Preços</div>
         <label>Primeira hora:</label>
-        <input type="text">
+        <input id="inputPrimeiraHora" type="text">
         <label>Demais horas:</label>
-        <input type="text">
-        <button>Salvar</button>
-        <button onclick="closeModal('dv-modal')">Cancelar</button>
+        <input id="inputDemaisHoras"type="text">
+        <button id="buttonSalvar">Salvar</button>
+        <button id='cancelar'>Cancelar</button>
     </div>
 </div>
+
+
+<div id="modalComprovante">
+    <div id="comprovanteContent"><div class="modalTitle">Comprovante</div>
+<label>Nome:</label>
+    <input type="text">
+<label>Placa:</label>
+    <input type="text">
+<label>Data:</label>
+    <input type="text">
+<label>Hora:</label>
+    <input type="text">
+    <button class="button-blue">Imprimir</button>
+    <button class="button-red" id="cancelar-comprovante">Cancelar</button>
+    </div>
+    </div>
+
+
 
 <script src=" main.js"></script>
 </body>

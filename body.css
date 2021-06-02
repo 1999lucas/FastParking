@@ -43,7 +43,7 @@ fieldset {
     border: 1px solid;
     border-radius: 30px;
     width: 100vh;
-    height: 20vh;
+    height: 40vh;
     padding: 5px;
     margin: auto;
     position: relative;
@@ -58,7 +58,7 @@ legend {
 
 .button {
     position: relative;
-    top: 50px;
+    top: 20px;
     left: 80px;
     margin-left: 100px;
     background-color: white;
@@ -67,8 +67,8 @@ legend {
     height: 30px;
 }
 
-input {
-    padding-left: 100px;
+input {;
+    width: 270px
 }
 
 .tableTitle {
@@ -87,6 +87,9 @@ input {
     display: none;
 }
 
+.modal.abrir {
+    display: block;
+}
 
 .modal-content {
     margin: 0 auto;
@@ -95,20 +98,144 @@ input {
     background-color: #eee;
     padding: 50px;
     box-shadow: 0 0 2px #fff;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .modalTitle {
     background-color: darkgrey;
     height: 50px;
-    width: 100%;
+    width: 800px;
     margin-left: -50px;
     margin-top: -50px;
-    padding-right: 100px;
     margin-bottom: 50px;
     text-transform: uppercase;
     text-align: center;
     color: white;
     font-size: 1.5em;
-    padding-top: 15px
+    padding-top: 15px;
+}
+
+
+/* .dv-modal{
+width: calc(40px + 35vw);
+display: flex;
+flex-direction: column;
+position: fixed;
+z-index: -10;
+} */
+
+
+#modalComprovante {
+    background-color: rgba(0, 0, 0, 0.75);
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+    display: none;
+    padding-top: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 300px;
+}
+
+#modalComprovante.abrir {
+    display: block;
+}
+
+
+.button-red {
+    background-color: red;
+    width: 100px;
+    margin-left: 300px;
+}
+
+.button-blue {
+    background-color: blue;
+    width: 100px;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.button-green {
+    background-color: green;
+}
+
+#labelHora {
+    margin-left: 310px
+}
+
+#labelData {
+    margin-left: 310px;
+}
+
+
+#labelPlaca{
+   margin-left: 310px 
+}
+
+#labelNome {
+    margin-left: 310px;
+}
+
+label{
+    text-align: center;
+}
+
+#nome{
+    display: flex;
+    margin: auto;
+}
+
+#data {
+    margin: auto;
+    width: 123px;
+    display: flex   
+}
+
+#placa {
+    display: flex;
+    margin: auto;
+    mar
+}
+
+#hora {
+    display: flex;
+    margin: auto;
+    width: 70px
+}
+
+#inputPrimeiraHora {
+    margin-left: 300px;
+}
+
+#inputDemaisHoras {
+    margin-left: 300px;
+}
+
+#buttonSalvar, #cancelar {
+    width: 100px;
+    margin-left: 390px;
+    margin-top: 10px
+}
+
+#comprovanteContent{
+    color: black;
+    background: white;
+    width: 750px;
+    height: 300px;
+    padding-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#comprovanteContent input {
+    margin-left: 200px;
+}
+
+#comprovanteContent label {
+    margin-right: 60px
 }
